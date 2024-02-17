@@ -1,14 +1,11 @@
 import android.databinding.tool.writer.ViewBinding
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
-
 android {
     namespace = "com.example.plantshandbook"
     compileSdk = 34
-
     buildFeatures {
         viewBinding = true
     }
@@ -21,7 +18,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -41,23 +37,17 @@ android {
 }
 
 dependencies {
-
-    implementation ("io.reactivex.rxjava2:rxjava:2.2.21")
-    implementation ("com.squareup.retrofit2:adapter-rxjava2:2.3.0")
-    implementation ("io.reactivex.rxjava2:rxandroid:2.1.1")
-
-    //retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("com.squareup.okhttp3:logging-interceptor:4.11.0")
-
-
-    implementation ("com.squareup.picasso:picasso:2.8")
-
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    //web
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.11.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+    implementation ("com.squareup.picasso:picasso:2.8")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

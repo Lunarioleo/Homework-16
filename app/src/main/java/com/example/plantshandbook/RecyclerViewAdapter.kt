@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso
 
 
 
-class RecyclerViewAdapter( val items: ArrayList<Character>): RecyclerView.Adapter<RecyclerViewHolder>() {
+class RecyclerViewAdapter( var items: ArrayList<Character>): RecyclerView.Adapter<RecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         val listItemView = LayoutInflater.from(parent.context).inflate(R.layout.plant_item, parent, false)
         return RecyclerViewHolder(listItemView)
@@ -32,7 +32,6 @@ class RecyclerViewAdapter( val items: ArrayList<Character>): RecyclerView.Adapte
 
     }
 }
-
 class RecyclerViewHolder( item: View): RecyclerView.ViewHolder(item){
     val image = item.findViewById<ImageView>(R.id.img)
     val title = item.findViewById<TextView>(R.id.text)
